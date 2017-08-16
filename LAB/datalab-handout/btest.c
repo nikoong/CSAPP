@@ -526,7 +526,7 @@ static void usage(char *cmd) {
 int main(int argc, char *argv[])
 {
     int errors;
-    char c;
+    char c;    
 
     /* parse command line args */
     while ((c = getopt(argc, argv, "hgf:r:T:1:2:3:")) != -1)
