@@ -1,0 +1,67 @@
+# Execution begins at address 0
+  .pos 0
+  irmovq stack, %rsp # Set up stack pointer
+  call main # Execute main program
+  halt # Terminate program
+
+
+.align 8
+# Source block
+src:
+  .quad 0x00a
+  .quad 0x0b0
+  .quad 0xc00
+# Destination block
+dest:
+  .quad 0x111
+  .quad 0x222
+  .quad 0x333
+
+
+main: 
+  irmovq src, %rdi
+  irmovq dest, %rsi
+  irmovq $3, %rdx
+  call copy_block
+  ret
+    
+#/* rsum_list - Recursive version of sum_list */
+#long rsum_list(list_ptr ls)
+#{
+#   if (!ls)
+#       return 0;
+#   else {
+#       long val = ls->val;
+#       long rest = rsum_list(ls->next);
+#       return val + rest;
+#   }
+#}
+
+copy_block:
+  andq %rdx, %rdx
+  jle L12
+  irmovq $0, %r8
+  irmovq $1, %r9
+  irmovq $8, %r11
+  rrmovq %r8, %rax
+loop:
+
+  mrmovq  (%rdi), %r12
+  rmmovq  %r12, (%rsi)
+  xorq  %r12, %rax
+  addq %r11, %rdi
+  addq %r11, %rsi 
+  subq  %r9, %rdx
+  xorq  %r8, %rdx
+  jne loop
+  ret
+L12:
+  irmovq  $0, %rax
+  ret
+
+
+
+# Stack starts here and grows to lower addresses
+  .pos 0x200
+stack:
+

@@ -6,16 +6,28 @@ This is CS:APP3e's lab and my solution.
 **There may be some errors when you run the code, because of the different versions of Unix.Here are some solutions.**
 
 
-**error1:**  "skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.7/libgcc.a when searching for -lgcc"
+**datalab:**
+
+**error1:**  
+"skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.7/libgcc.a when searching for -lgcc"
 or	"skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.7/libgcc_s.so when searching for -lgcc_s"
+*solution:* sudo apt-get install gcc-4.7-multilib
 
 
-**solution:** sudo apt-get install gcc-4.7-multilib
+**error2:** 
+"/usr/include/features.h:364:25: fatal error: sys/cdefs.h: No such file or directory"
+*solution:* sudo apt-get install libc6-dev-i386
 
 
-**error2:**  "/usr/include/features.h:364:25: fatal error: sys/cdefs.h: No such file or directory"
+**archlab**
 
-**solution:** sudo apt-get install libc6-dev-i386
+"ssim.c:20:16: fatal error: tk.h: No such file or directory"
+"/usr/bin/ld: cannot find -ltk"
+"/usr/bin/ld: cannot find -ltcl"
+*solution:* sudo apt-get install tk-dev tcl-dev
+
+
+
 
 ___
 
