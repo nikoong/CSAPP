@@ -16,7 +16,9 @@ int main()
 	printf("> ");                   
 	Fgets(cmdline, MAXLINE, stdin); 
 	if (feof(stdin))
-	    exit(0);
+        exit(0);
+    
+        
 
 	/* Evaluate */
 	eval(cmdline);

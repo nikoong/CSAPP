@@ -1,9 +1,9 @@
 # CSAPP_lab
 
-This is CS:APP3e's lab and my solution.
+Here are my codes for CS:APP3e's labs.
 
 
-**There may be some errors when you run the code, because of the different versions of Unix.Here are some solutions.**
+There may be some errors when you run the code, because of the different versions of Unix. **Here are some solutions.**
 
 
 **datalab:**
