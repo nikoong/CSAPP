@@ -2,7 +2,7 @@
 
  my solutions for CS:APP3e's labs.
 
-* **Because versions of Unix are different,there may be some errors when you run some datalab and archlab. **
+* **Because versions of Unix are different,there may be some errors when you run some datalab and archlab.**
 
 * **Here are solutions.**
 
