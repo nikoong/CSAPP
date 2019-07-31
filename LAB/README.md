@@ -7,7 +7,7 @@
 * **Here are solutions.**
 
 
-####datalab:
+#### datalab:
 
 **error1:**  
 "skipping incompatible /usr/lib/gcc/x86_64-linux-gnu/4.7/libgcc.a when searching for -lgcc"
@@ -24,7 +24,7 @@ sudo apt-get install gcc-4.7-multilib
 sudo apt-get install libc6-dev-i386
 
 
-####archlab
+#### archlab
 
 "ssim.c:20:16: fatal error: tk.h: No such file or directory"
 "/usr/bin/ld: cannot find -ltk"
